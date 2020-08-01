@@ -7,18 +7,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const autoprefixer = require('autoprefixer');
 
+const ASSET_PATH = process.env.ASSET_PATH || '/';
+
 module.exports = {
   devtool: false,
   entry: {
     // main: ['@babel/polyfill', './src/app/index.js', './src/css/main.scss'],
-    main: ['@babel/polyfill', './src/app/index.js'],
+    main: ['@babel/polyfill', './src/app/index.js', './src/public/manifest.json'],
   },
   output: {
     path: `${__dirname}/dist`,
-    publicPath: '/',
+    publicPath: ASSET_PATH,
     filename: 'bundle.js',
   },
   devServer: {
+    contentBase: './src/public',
     historyApiFallback: true,
     port: 3000,
     hot: true,
@@ -81,6 +84,7 @@ module.exports = {
       'process.env': {
         devServer: true,
       },
+      'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
     }),
     // new CopyWebpackPlugin({ patterns: [{ from: 'src/img', to: 'img' }] }),
     new webpack.SourceMapDevToolPlugin({
@@ -90,7 +94,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       filename: './index.html',
-      template: './src/index.html',
+      template: './src/public/index.html',
     }),
   ],
   resolve: {
