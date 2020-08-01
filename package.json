@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.config.js --mode development",
+    "start": "webpack-dev-server --mode production",
+    "dev": "webpack-dev-server --config webpack.dev.config.js --mode development",
     "build": "webpack --config webpack.prod.config.js --mode production",
     "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
   },
