@@ -64,7 +64,7 @@ class AddTodoModal extends React.Component {
                 <Form className="form">
                   <Row gutter={[16, 16]}>
                     <Col span={12} className="form-item">
-                      <label htmlFor="parent" key="parent">
+                      <label htmlFor="parent" key="parent" style={{ textAlign: 'end' }}>
                         Родительский элемент
                       </label>
                     </Col>

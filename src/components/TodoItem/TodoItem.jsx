@@ -24,6 +24,7 @@ class Todo extends React.Component {
           disabled={completed}
           onChange={(e, newValue) => update(newValue)}
           style={{ margin: 8 }}
+          className="input"
         />
         <If condition={completed}>
           <DeleteTodoModal

@@ -72,3 +72,10 @@ code {
   height: 22px !important;
   font-size: 12px !important;
 }
+
+.input {
+  @media (max-width: 575px) {
+    width: calc(90% - 90px) !important;
+    margin-right: auto !important;
+  }
+}
