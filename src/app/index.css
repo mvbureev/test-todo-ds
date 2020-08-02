@@ -73,9 +73,17 @@ code {
   font-size: 12px !important;
 }
 
-.input {
+.trigger-modal {
   @media (max-width: 575px) {
-    width: calc(90% - 90px) !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.task {
+  @media (max-width: 575px) {
+    width: calc(100% - 90px) !important;
     margin-right: auto !important;
   }
 }

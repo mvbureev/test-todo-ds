@@ -45,7 +45,9 @@ class AddTodoModal extends React.Component {
     const { items } = this.state;
     return (
       <>
-        <div onClick={this.openModal}>{trigger}</div>
+        <div className="trigger-modal" onClick={this.openModal}>
+          {trigger}
+        </div>
         <Modal title="Добавить элемент" visible={this.state.visible} onCancel={this.closeModal} footer={null}>
           <Formik
             initialValues={{ parent: null, text: null }}
