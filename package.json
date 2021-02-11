@@ -51,7 +51,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.2.1",
+    "@ant-design/icons": "^4.5.0",
     "antd": "^4.5.1",
     "express": "^4.17.1",
     "formik": "^2.2.5",
